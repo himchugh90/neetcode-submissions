@@ -1,0 +1,37 @@
+class MyQueue:
+
+    def __init__(self):
+        self.stack = []
+        self.queue = []
+        
+
+    def push(self, x: int) -> None:
+        self.queue.append(x)
+
+
+    def pop(self) -> int:
+        s = self.queue[0]
+        # print(s)
+        self.queue.remove(s)
+        return s
+    
+        
+
+    def peek(self) -> int:
+        s = self.queue[0]
+        return s
+        
+
+    def empty(self) -> bool:
+        if len(self.queue) == 0 :
+            return True
+        return False
+        
+
+
+# Your MyQueue object will be instantiated and called as such:
+# obj = MyQueue()
+# obj.push(x)
+# param_2 = obj.pop()
+# param_3 = obj.peek()
+# param_4 = obj.empty()
